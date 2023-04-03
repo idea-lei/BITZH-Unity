@@ -15,4 +15,16 @@ public class TargetBehaviour : MonoBehaviour
     {
         
     }
+
+    // not using physics system
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log($"on trigger enter with: {other.name}");
+    }
+
+    // using physics system
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log($"on collision enter with: {collision.gameObject.name}");
+    }
 }
